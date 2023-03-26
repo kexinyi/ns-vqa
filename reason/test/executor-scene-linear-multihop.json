@@ -1,0 +1,361 @@
+{
+  "info": {
+    "split": "val",
+    "license": "Creative Commons Attribution (CC BY 4.0)",
+    "version": "1.0",
+    "date": "2/14/2017"
+  },
+  "questions": [
+    {
+      "split": "val",
+      "image_filename": "CLEVR_val_000000.png",
+      "image_index": 0,
+      "image": "CLEVR_val_000000",
+      "question": "How many objects are left after removing all gray spheres and all cyan cubes?",
+      "program": [
+        { "type": "scene", "inputs": [], "_output": [ 0, 1, 2, 3, 4 ], "value_inputs": [] },
+        { "type": "filter_color", "inputs": [ 0 ], "_output": [ 1, 4 ], "value_inputs": [ "gray" ] },
+        { "type": "filter_shape", "inputs": [ 1 ], "_output": [], "value_inputs": [ "sphere" ] },
+        { "type": "subtraction_set", "inputs": [ 0, 2 ], "_output": [ 0, 1, 2, 3, 4 ], "value_inputs": [] },
+        { "type": "filter_color", "inputs": [ 3 ], "_output": [], "value_inputs": [ "cyan" ] },
+        { "type": "filter_shape", "inputs": [ 4 ], "_output": [], "value_inputs": [ "cube" ] },
+        { "type": "subtraction_set", "inputs": [ 3, 5 ], "_output": [ 0, 1, 2, 3, 4 ], "value_inputs": [] },
+        { "type": "count", "inputs": [ 6 ], "_output": 5, "value_inputs": [] }
+      ],
+      "answer": 5,
+      "template_filename": "multisub-linear.json",
+      "question_family_index": 0,
+      "question_index": 0
+    },
+    {
+      "split": "val",
+      "image_filename": "CLEVR_val_000001.png",
+      "image_index": 1,
+      "image": "CLEVR_val_000001",
+      "question": "How many objects are left after removing all purple spheres and all blue cylinders?",
+      "program": [
+        {
+          "type": "scene",
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "value_inputs": []
+        },
+        {
+          "type": "filter_color",
+          "inputs": [
+            0
+          ],
+          "_output": [
+            2
+          ],
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "type": "filter_shape",
+          "inputs": [
+            1
+          ],
+          "_output": [
+            2
+          ],
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "type": "subtraction_set",
+          "inputs": [
+            0,
+            2
+          ],
+          "_output": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "value_inputs": []
+        },
+        {
+          "type": "filter_color",
+          "inputs": [
+            3
+          ],
+          "_output": [
+            0,
+            1,
+            7
+          ],
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "type": "filter_shape",
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0,
+            1
+          ],
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "type": "subtraction_set",
+          "inputs": [
+            3,
+            5
+          ],
+          "_output": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "value_inputs": []
+        },
+        {
+          "type": "count",
+          "inputs": [
+            6
+          ],
+          "_output": 7,
+          "value_inputs": []
+        }
+      ],
+      "answer": 7,
+      "template_filename": "multisub-linear.json",
+      "question_family_index": 0,
+      "question_index": 1
+    },
+    {
+      "split": "val",
+      "image_filename": "CLEVR_val_000002.png",
+      "image_index": 2,
+      "image": "CLEVR_val_000002",
+      "question": "How many objects are left after removing all cubes and all brown cylinders?",
+      "program": [
+        {
+          "type": "scene",
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "value_inputs": []
+        },
+        {
+          "type": "filter_shape",
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            2,
+            7
+          ],
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "type": "subtraction_set",
+          "inputs": [
+            0,
+            1
+          ],
+          "_output": [
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "value_inputs": []
+        },
+        {
+          "type": "filter_color",
+          "inputs": [
+            2
+          ],
+          "_output": [
+            5
+          ],
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "type": "filter_shape",
+          "inputs": [
+            3
+          ],
+          "_output": [
+            5
+          ],
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "type": "subtraction_set",
+          "inputs": [
+            2,
+            4
+          ],
+          "_output": [
+            1,
+            3,
+            4,
+            6
+          ],
+          "value_inputs": []
+        },
+        {
+          "type": "count",
+          "inputs": [
+            5
+          ],
+          "_output": 4,
+          "value_inputs": []
+        }
+      ],
+      "answer": 4,
+      "template_filename": "multisub-linear.json",
+      "question_family_index": 0,
+      "question_index": 2
+    },
+    {
+      "split": "val",
+      "image_filename": "CLEVR_val_000003.png",
+      "image_index": 3,
+      "image": "CLEVR_val_000003",
+      "question": "How many objects are left after removing all yellow balls and all cubes?",
+      "program": [
+        {
+          "type": "scene",
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "value_inputs": []
+        },
+        {
+          "type": "filter_color",
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0
+          ],
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "type": "filter_shape",
+          "inputs": [
+            1
+          ],
+          "_output": [
+            0
+          ],
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "type": "subtraction_set",
+          "inputs": [
+            0,
+            2
+          ],
+          "_output": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "value_inputs": []
+        },
+        {
+          "type": "filter_shape",
+          "inputs": [
+            3
+          ],
+          "_output": [
+            3
+          ],
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "type": "subtraction_set",
+          "inputs": [
+            3,
+            4
+          ],
+          "_output": [
+            1,
+            2,
+            4,
+            5,
+            6
+          ],
+          "value_inputs": []
+        },
+        {
+          "type": "count",
+          "inputs": [
+            5
+          ],
+          "_output": 5,
+          "value_inputs": []
+        }
+      ],
+      "answer": 5,
+      "template_filename": "multisub-linear.json",
+      "question_family_index": 0,
+      "question_index": 3
+    }
+  ]
+}
