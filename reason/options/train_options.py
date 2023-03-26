@@ -19,7 +19,7 @@ class TrainOptions(BaseOptions):
         self.parser.add_argument('--dropout_p', default=0, type=float, help='dropout probability for output sequence')
         self.parser.add_argument('--n_layers', default=2, type=int, help='number of hidden layers')
         self.parser.add_argument('--rnn_cell', default='lstm', type=str, help='encoder rnn cell type, options: lstm, gru')
-        self.parser.add_argument('--bidirectional', default=1, type=int, help='bidirectional encoder')
+        self.parser.add_argument('--bidirectional', default=True, type=bool, help='bidirectional encoder')
         self.parser.add_argument('--variable_lengths', default=1, type=int, help='variable input length')
         self.parser.add_argument('--use_attention', default=1, type=int, help='use attention in decoder')
         self.parser.add_argument('--use_input_embedding', default=0, type=int, help='use pretrained word embedding for input sentences')
