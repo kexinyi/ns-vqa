@@ -9,7 +9,25 @@ class TestStringMethods(unittest.TestCase):
         vocab_json = 'vocab.json'
         self.executor = ClevrExecutor(scene_json, scene_json, vocab_json)
 
-    def test_execute(self):
+    def test_execute_onehop(self):
+        # count, subtraction_set, filter_shape[cube], filter_color[cyan],
+        # subtraction_set, filter_shape[sphere], filter_color[gray], scene, end
+        x = [4, 17, 13, 8, 16, 2]
+        index = 0
+        split = 'val'
+        ans = self.executor.run(x,index,split)
+        self.assertEquals(ans, '5')
+
+    def test_execute_subtract_multihop(self):
+        # count, subtraction_set, filter_shape[cube], filter_color[cyan],
+        # subtraction_set, filter_shape[sphere], filter_color[gray], scene, end
+        x = [4, 17, 13, 7, 17, 13, 8, 16, 2]
+        index = 0
+        split = 'val'
+        ans = self.executor.run(x,index,split)
+        self.assertEquals(ans, '5')
+
+    def test_subtract_empty_set(self):
         # count, subtraction_set, filter_shape[cube], filter_color[cyan],
         # subtraction_set, filter_shape[sphere], filter_color[gray], scene, end
         x = [4, 17, 13, 7, 17, 15, 8, 16, 2]
@@ -17,6 +35,7 @@ class TestStringMethods(unittest.TestCase):
         split = 'val'
         ans = self.executor.run(x,index,split)
         self.assertEquals(ans, '5')
+
 
 
 if __name__ == '__main__':
