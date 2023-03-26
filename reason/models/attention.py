@@ -5,7 +5,7 @@ import torch.nn.functional as F
 
 class Attention(nn.Module):
     """Attention layer"""
-        
+
     def __init__(self, dim, use_weight=False, hidden_size=512):
         super(Attention, self).__init__()
         self.use_weight = use_weight
@@ -40,6 +40,6 @@ class Attention(nn.Module):
 
         mix = torch.bmm(attn, context) # (batch_size, output_size, hidden_size)
         comb = torch.cat((mix, output), dim=2) # (batch_size, output_size, 2*hidden_size)
-        output = F.tanh(self.linear_out(comb.view(-1, 2*hidden_size)).view(batch_size, -1, hidden_size)) # (batch_size, output_size, hidden_size)
+        output = torch.tanh(self.linear_out(comb.view(-1, 2*hidden_size)).view(batch_size, -1, hidden_size)) # (batch_size, output_size, hidden_size)
 
         return output, attn
