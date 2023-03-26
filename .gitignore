@@ -1,0 +1,4 @@
+# created by virtualenv automatically
+venv
+__pycache__
+*egg-info
