@@ -1,10 +1,10 @@
-pytorch=0.4.0
+torch==1.13.1
 torchvision
 cython
 matplotlib
 numpy
 scipy
-opencv
+opencv-python
 pyyaml
 packaging
 pycocotools
