@@ -1,5 +1,4 @@
 import random
-import json
 import utils.utils as utils
 
 
@@ -65,9 +64,11 @@ class ClevrExecutor:
 
         scene = self.scenes[split][index]
         self.exe_trace = []
+        current_scene = list(scene)
         for j in range(length):
             i = length - 1 - j
             token = self.vocab['program_idx_to_token'][x[i]]
+            # __import__('ipdb').set_trace(context=31)
             if token == 'scene':
                 if temp is not None:
                     ans = 'error'
@@ -78,6 +79,9 @@ class ClevrExecutor:
                 module = self.modules[token]
                 if token.startswith('same') or token.startswith('relate'):
                     ans = module(ans, scene)
+                elif token.startswith('subtract'):
+                    current_scene = module(current_scene, ans)
+                    ans = current_scene
                 else:
                     ans = module(ans, temp)
                 if ans == 'error':
@@ -150,6 +154,29 @@ class ClevrExecutor:
         self.modules['same_size'] = self.same_size
         self.modules['union'] = self.union
         self.modules['unique'] = self.unique
+        self.modules['subtraction'] = self.subtraction
+        self.modules['subtraction_set'] = self.subtraction_set
+        self.modules['subtraction_count_sets'] = self.subtraction_count_sets
+
+    def subtraction_set(self, scene1, scene2):
+        if type(scene1) == list and type(scene2) == list:
+            output = []
+            for o in scene1:
+                if o not in scene2:
+                    output.append(o)
+            return output
+        return 'error'
+
+    def subtraction_count_sets(self, scene1, scene2):
+        if type(scene1) == list and type(scene2) == list:
+            return len(scene1) - len(scene2)
+        return 'error'
+
+    def subtraction(self, integer1, integer2):
+        if type(integer1) == int and type(integer2) == int:
+            return integer1-integer2
+        return 'error'
+
         
     def count(self, scene, _):
         if type(scene) == list:
