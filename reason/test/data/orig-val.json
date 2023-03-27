@@ -1,0 +1,607 @@
+{
+  "info": {
+    "split": "val",
+    "license": "Creative Commons Attribution (CC BY 4.0)",
+    "version": "1.0",
+    "date": "2/14/2017"
+  },
+  "questions": [
+    {
+      "image_index": 0,
+      "program": [
+        { "inputs": [], "function": "scene", "value_inputs": [] },
+        { "inputs": [ 0 ], "function": "filter_size", "value_inputs": [ "large" ] },
+        { "inputs": [ 1 ], "function": "filter_material", "value_inputs": [ "metal" ] },
+        { "inputs": [ 2 ], "function": "unique", "value_inputs": [] },
+        { "inputs": [ 3 ], "function": "same_shape", "value_inputs": [] },
+        { "inputs": [ 4 ], "function": "exist", "value_inputs": [] }
+      ],
+      "question_index": 0,
+      "image_filename": "CLEVR_val_000000.png",
+      "question_family_index": 39,
+      "split": "val",
+      "answer": "no",
+      "question": "Are there any other things that are the same shape as the big metallic object?"
+    },
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 1,
+      "image_filename": "CLEVR_val_000000.png",
+      "question_family_index": 47,
+      "split": "val",
+      "answer": "yes",
+      "question": "Is there a big brown object of the same shape as the green thing?"
+    },
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "query_material",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 2,
+      "image_filename": "CLEVR_val_000000.png",
+      "question_family_index": 87,
+      "split": "val",
+      "answer": "metal",
+      "question": "What is the material of the big purple object?"
+    },
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 3,
+      "image_filename": "CLEVR_val_000000.png",
+      "question_family_index": 73,
+      "split": "val",
+      "answer": "yes",
+      "question": "There is a small gray block; are there any spheres to the left of it?"
+    },
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "query_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "query_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3,
+            9
+          ],
+          "function": "equal_shape",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 4,
+      "image_filename": "CLEVR_val_000000.png",
+      "question_family_index": 12,
+      "split": "val",
+      "answer": "no",
+      "question": "Is the purple thing the same shape as the large gray rubber thing?"
+    },
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 5,
+      "image_filename": "CLEVR_val_000000.png",
+      "question_family_index": 40,
+      "split": "val",
+      "answer": "2",
+      "question": "What number of other objects are the same size as the purple shiny object?"
+    },
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            7,
+            11
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 6,
+      "image_filename": "CLEVR_val_000000.png",
+      "question_family_index": 70,
+      "split": "val",
+      "answer": "2",
+      "question": "How many objects are either metal things behind the small green rubber cylinder or small green rubber objects?"
+    },
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "query_color",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 7,
+      "image_filename": "CLEVR_val_000000.png",
+      "question_family_index": 88,
+      "split": "val",
+      "answer": "purple",
+      "question": "What is the color of the large shiny sphere?"
+    },
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "query_material",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 8,
+      "image_filename": "CLEVR_val_000000.png",
+      "question_family_index": 76,
+      "split": "val",
+      "answer": "rubber",
+      "question": "What is the thing in front of the small metallic object made of?"
+    }
+  ]
+}
